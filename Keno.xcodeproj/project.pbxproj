@@ -1,0 +1,332 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFB6E36F1D737027008749F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E36E1D737027008749F0 /* AppDelegate.swift */; };
+		EFB6E3711D737027008749F0 /* KenoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E3701D737027008749F0 /* KenoController.swift */; };
+		EFB6E3741D737027008749F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB6E3721D737027008749F0 /* Main.storyboard */; };
+		EFB6E3761D737027008749F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB6E3751D737027008749F0 /* Assets.xcassets */; };
+		EFB6E3791D737027008749F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB6E3771D737027008749F0 /* LaunchScreen.storyboard */; };
+		EFB6E3811D737091008749F0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E3801D737090008749F0 /* Models.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EFB6E36B1D737027008749F0 /* Keno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keno.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFB6E36E1D737027008749F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFB6E3701D737027008749F0 /* KenoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenoController.swift; sourceTree = "<group>"; };
+		EFB6E3731D737027008749F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFB6E3751D737027008749F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFB6E3781D737027008749F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFB6E37A1D737027008749F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFB6E3801D737090008749F0 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Models.swift; path = ../Models.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFB6E3681D737027008749F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF08971C1D739164006839E6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFB6E3701D737027008749F0 /* KenoController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EF08971D1D739171006839E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFB6E3771D737027008749F0 /* LaunchScreen.storyboard */,
+				EFB6E3721D737027008749F0 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EF08971E1D739181006839E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EFB6E3751D737027008749F0 /* Assets.xcassets */,
+				EFB6E37A1D737027008749F0 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EFB6E3621D737027008749F0 = {
+			isa = PBXGroup;
+			children = (
+				EFB6E36D1D737027008749F0 /* Keno */,
+				EFB6E36C1D737027008749F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFB6E36C1D737027008749F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFB6E36B1D737027008749F0 /* Keno.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFB6E36D1D737027008749F0 /* Keno */ = {
+			isa = PBXGroup;
+			children = (
+				EFB6E36E1D737027008749F0 /* AppDelegate.swift */,
+				EF08971C1D739164006839E6 /* Controllers */,
+				EFB6E3821D73709A008749F0 /* Models */,
+				EF08971D1D739171006839E6 /* Views */,
+				EF08971E1D739181006839E6 /* Resources */,
+			);
+			path = Keno;
+			sourceTree = "<group>";
+		};
+		EFB6E3821D73709A008749F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EFB6E3801D737090008749F0 /* Models.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFB6E36A1D737027008749F0 /* Keno */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFB6E37D1D737027008749F0 /* Build configuration list for PBXNativeTarget "Keno" */;
+			buildPhases = (
+				EFB6E3671D737027008749F0 /* Sources */,
+				EFB6E3681D737027008749F0 /* Frameworks */,
+				EFB6E3691D737027008749F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keno;
+			productName = Keno;
+			productReference = EFB6E36B1D737027008749F0 /* Keno.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFB6E3631D737027008749F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Fanatize;
+				TargetAttributes = {
+					EFB6E36A1D737027008749F0 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = EFB6E3661D737027008749F0 /* Build configuration list for PBXProject "Keno" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFB6E3621D737027008749F0;
+			productRefGroup = EFB6E36C1D737027008749F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFB6E36A1D737027008749F0 /* Keno */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFB6E3691D737027008749F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFB6E3791D737027008749F0 /* LaunchScreen.storyboard in Resources */,
+				EFB6E3761D737027008749F0 /* Assets.xcassets in Resources */,
+				EFB6E3741D737027008749F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFB6E3671D737027008749F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFB6E3811D737091008749F0 /* Models.swift in Sources */,
+				EFB6E3711D737027008749F0 /* KenoController.swift in Sources */,
+				EFB6E36F1D737027008749F0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EFB6E3721D737027008749F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFB6E3731D737027008749F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFB6E3771D737027008749F0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFB6E3781D737027008749F0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFB6E37B1D737027008749F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFB6E37C1D737027008749F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFB6E37E1D737027008749F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Keno/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fanatize.Keno;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EFB6E37F1D737027008749F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Keno/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fanatize.Keno;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFB6E3661D737027008749F0 /* Build configuration list for PBXProject "Keno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFB6E37B1D737027008749F0 /* Debug */,
+				EFB6E37C1D737027008749F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFB6E37D1D737027008749F0 /* Build configuration list for PBXNativeTarget "Keno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFB6E37E1D737027008749F0 /* Debug */,
+				EFB6E37F1D737027008749F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFB6E3631D737027008749F0 /* Project object */;
+}

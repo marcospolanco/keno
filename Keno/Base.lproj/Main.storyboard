@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bG9-Mk-OYe">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fRl-cH-70L">
+            <objects>
+                <navigationController id="bG9-Mk-OYe" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bsz-BZ-ELw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="g2u-4d-397"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EqI-Qc-xaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="364"/>
+        </scene>
+        <!--Keno Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="KenoController" customModule="Keno" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZ1-jd-2dD">
+                                <rect key="frame" x="0.0" y="64" width="414" height="414"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AZ1-jd-2dD" secondAttribute="height" multiplier="1:1" id="yFe-Uk-M4J"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Anc-xu-gtY" kind="embed" id="S2d-5R-wFc"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjj-Rq-QJG">
+                                <rect key="frame" x="20" y="515" width="100" height="30"/>
+                                <state key="normal" title="Play Keno!"/>
+                                <connections>
+                                    <action selector="playAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Art-rb-Flj"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="eIu-no-su9">
+                                <rect key="frame" x="126" y="515" width="270" height="31"/>
+                                <connections>
+                                    <action selector="changeBet:" destination="BYZ-38-t0r" eventType="valueChanged" id="2zU-05-dQD"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5F-U2-9dZ" userLabel="Bet">
+                                <rect key="frame" x="244" y="486" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBl-5T-aJu" userLabel="Balance">
+                                <rect key="frame" x="86" y="486" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a5F-U2-9dZ" firstAttribute="leading" secondItem="nBl-5T-aJu" secondAttribute="trailing" constant="8" id="1i1-KV-w83"/>
+                            <constraint firstAttribute="trailing" secondItem="AZ1-jd-2dD" secondAttribute="trailing" id="3VV-TK-J7T"/>
+                            <constraint firstItem="eIu-no-su9" firstAttribute="leading" secondItem="jjj-Rq-QJG" secondAttribute="trailing" constant="8" id="5ZI-is-MJf"/>
+                            <constraint firstItem="AZ1-jd-2dD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6a7-Rz-kdv"/>
+                            <constraint firstItem="eIu-no-su9" firstAttribute="top" secondItem="AZ1-jd-2dD" secondAttribute="bottom" constant="37" id="6qK-5V-iPO"/>
+                            <constraint firstItem="a5F-U2-9dZ" firstAttribute="top" secondItem="AZ1-jd-2dD" secondAttribute="bottom" constant="8" id="84t-hd-1iy"/>
+                            <constraint firstItem="jjj-Rq-QJG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ArY-Yz-zqW"/>
+                            <constraint firstItem="a5F-U2-9dZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GXa-Yb-WIf"/>
+                            <constraint firstItem="jjj-Rq-QJG" firstAttribute="top" secondItem="AZ1-jd-2dD" secondAttribute="bottom" constant="37" id="Lsa-Wj-Un7"/>
+                            <constraint firstItem="eIu-no-su9" firstAttribute="top" secondItem="a5F-U2-9dZ" secondAttribute="bottom" constant="8" id="MKD-3Q-0ly"/>
+                            <constraint firstItem="eIu-no-su9" firstAttribute="top" secondItem="jjj-Rq-QJG" secondAttribute="top" id="eAy-Er-lHi"/>
+                            <constraint firstItem="jjj-Rq-QJG" firstAttribute="width" secondItem="eIu-no-su9" secondAttribute="height" multiplier="10:3" id="erO-is-XX8"/>
+                            <constraint firstItem="a5F-U2-9dZ" firstAttribute="top" secondItem="nBl-5T-aJu" secondAttribute="top" id="l29-Oe-a3j"/>
+                            <constraint firstItem="eIu-no-su9" firstAttribute="height" secondItem="jjj-Rq-QJG" secondAttribute="height" id="oUi-Yj-k86"/>
+                            <constraint firstItem="AZ1-jd-2dD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qee-Gv-hkg"/>
+                            <constraint firstItem="a5F-U2-9dZ" firstAttribute="height" secondItem="nBl-5T-aJu" secondAttribute="height" id="tc4-AG-X1h"/>
+                            <constraint firstItem="eIu-no-su9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="td6-JV-STj"/>
+                            <constraint firstItem="a5F-U2-9dZ" firstAttribute="width" secondItem="nBl-5T-aJu" secondAttribute="width" id="vYZ-W2-Ahf"/>
+                            <constraint firstItem="a5F-U2-9dZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="150:414" id="wDQ-GA-Aac"/>
+                            <constraint firstItem="a5F-U2-9dZ" firstAttribute="leading" secondItem="nBl-5T-aJu" secondAttribute="trailing" constant="6" id="ziU-pC-vLJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Lsa-Wj-Un7"/>
+                                <exclude reference="6qK-5V-iPO"/>
+                                <exclude reference="ziU-pC-vLJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="Aol-aF-qZs"/>
+                    <connections>
+                        <outlet property="balanceLabel" destination="nBl-5T-aJu" id="hdC-hh-Nwt"/>
+                        <outlet property="betLabel" destination="a5F-U2-9dZ" id="eHQ-BS-7mK"/>
+                        <outlet property="betSlider" destination="eIu-no-su9" id="9ck-fL-Wb6"/>
+                        <outlet property="playButton" destination="jjj-Rq-QJG" id="nZS-9f-GtU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="446" y="364"/>
+        </scene>
+        <!--Keno Collection Controller-->
+        <scene sceneID="eVY-IJ-ZOg">
+            <objects>
+                <collectionViewController id="Anc-xu-gtY" customClass="KenoCollectionController" customModule="Keno" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="S2o-pH-99p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Jx5-QV-6M7">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KenoCollectionViewCell" id="7jR-yy-u1d" customClass="KenoCollectionViewCell" customModule="Keno" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REi-7w-Swn">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="REi-7w-Swn" secondAttribute="trailing" id="6tX-fM-MuU"/>
+                                    <constraint firstItem="REi-7w-Swn" firstAttribute="leading" secondItem="7jR-yy-u1d" secondAttribute="leading" id="Jvv-q7-vV4"/>
+                                    <constraint firstAttribute="bottom" secondItem="REi-7w-Swn" secondAttribute="bottom" id="Q7R-NN-Sli"/>
+                                    <constraint firstItem="REi-7w-Swn" firstAttribute="top" secondItem="7jR-yy-u1d" secondAttribute="top" id="YmD-Ir-Qdy"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="label" destination="REi-7w-Swn" id="h7i-m5-dLq"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Anc-xu-gtY" id="XXr-by-MXk"/>
+                            <outlet property="delegate" destination="Anc-xu-gtY" id="IqV-aj-EDM"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w1U-Fj-IfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="364"/>
+        </scene>
+    </scenes>
+</document>
