@@ -10,15 +10,21 @@
 
 import Foundation
 
-let DEFAULT_BALANCE = 500.0     //default balance in a wallet
+let DEFAULT_BALANCE = 100.0     //default balance in a wallet
 let DRAWING_COUNT = 15          //the number of draws for Keno machine
 let BETTING_COUNT = 10          //the number of bets the user must make
-let NUMBERS_COUNT = 64          //the number of numbers on our board, 8x8
+var NUMBERS_COUNT = 25          //the number of numbers on our board; this is just default...can vary!
+let NUMBERS_MAX = 10            //sqrt of the highest number of board items
 let MINIMUM_BET: Double = 1     //minimum dollar amount of a bet
 let MAXIMUM_BET: Double = 50.0    //minimum dollar amount of a bet
 let PAYOUT_RATE   = 0.10        //10% payout for each bet that hits draw
 
 class Player {
+    
+    static var player: Player? //the currently logged in player, only one at a time!
+    
+    static var isLoggedIn = false
+    
     let username: String    //immutable, so public
     let password: String    //immutable, so public
     let wallet = Wallet()   //immutable, so public
@@ -27,7 +33,6 @@ class Player {
         self.username = username
         self.password = password
     }
-    
 }
 
 struct Bet {

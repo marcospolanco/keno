@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7328257B359FD49906E925F9 /* Pods_Keno.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B32EE8AC008D310049B85D /* Pods_Keno.framework */; };
+		EF3954D41D7690C400162D7D /* casino.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF3954D31D7690C400162D7D /* casino.mp3 */; };
+		EF3954D61D76A07D00162D7D /* bet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF3954D51D76A07D00162D7D /* bet.mp3 */; };
+		EF3954D81D76A2AE00162D7D /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF3954D71D76A2AE00162D7D /* error.mp3 */; };
+		EF3954DB1D76A71A00162D7D /* undo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF3954DA1D76A71A00162D7D /* undo.mp3 */; };
+		EF3954DD1D76AC9100162D7D /* start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF3954DC1D76AC9100162D7D /* start.mp3 */; };
+		EF3954DF1D76B1EC00162D7D /* miss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF3954DE1D76B1EC00162D7D /* miss.mp3 */; };
+		EF3954E11D76B37400162D7D /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF3954E01D76B37400162D7D /* hit.mp3 */; };
+		EF3954E31D76B61A00162D7D /* cash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF3954E21D76B61A00162D7D /* cash.mp3 */; };
+		EF71FF8B1D74BDDF006DB87F /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71FF8A1D74BDDF006DB87F /* System.swift */; };
+		EFB14E191D74ABE900B035D1 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB14E181D74ABE900B035D1 /* LoginController.swift */; };
+		EFB14E1B1D74ACC300B035D1 /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB14E1A1D74ACC300B035D1 /* UserInterface.swift */; };
+		EFB14E1E1D74AE1A00B035D1 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB14E1D1D74AE1A00B035D1 /* WelcomeController.swift */; };
 		EFB6E36F1D737027008749F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E36E1D737027008749F0 /* AppDelegate.swift */; };
 		EFB6E3711D737027008749F0 /* KenoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E3701D737027008749F0 /* KenoController.swift */; };
 		EFB6E3741D737027008749F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB6E3721D737027008749F0 /* Main.storyboard */; };
@@ -16,6 +29,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44650D96D3C94FF7FD79DAAA /* Pods-Keno.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keno.release.xcconfig"; path = "Pods/Target Support Files/Pods-Keno/Pods-Keno.release.xcconfig"; sourceTree = "<group>"; };
+		539DF0B20E32123F137DB6F9 /* Pods-Keno.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keno.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Keno/Pods-Keno.debug.xcconfig"; sourceTree = "<group>"; };
+		C0B32EE8AC008D310049B85D /* Pods_Keno.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Keno.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3954D31D7690C400162D7D /* casino.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = casino.mp3; sourceTree = "<group>"; };
+		EF3954D51D76A07D00162D7D /* bet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bet.mp3; sourceTree = "<group>"; };
+		EF3954D71D76A2AE00162D7D /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
+		EF3954DA1D76A71A00162D7D /* undo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = undo.mp3; sourceTree = "<group>"; };
+		EF3954DC1D76AC9100162D7D /* start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start.mp3; sourceTree = "<group>"; };
+		EF3954DE1D76B1EC00162D7D /* miss.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = miss.mp3; sourceTree = "<group>"; };
+		EF3954E01D76B37400162D7D /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
+		EF3954E21D76B61A00162D7D /* cash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cash.mp3; sourceTree = "<group>"; };
+		EF71FF8A1D74BDDF006DB87F /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		EFB14E181D74ABE900B035D1 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		EFB14E1A1D74ACC300B035D1 /* UserInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
+		EFB14E1D1D74AE1A00B035D1 /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		EFB6E36B1D737027008749F0 /* Keno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB6E36E1D737027008749F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFB6E3701D737027008749F0 /* KenoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenoController.swift; sourceTree = "<group>"; };
@@ -31,15 +59,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7328257B359FD49906E925F9 /* Pods_Keno.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83F517113FAD5375EE8FDD4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0B32EE8AC008D310049B85D /* Pods_Keno.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1ABF949CAD64D081F6C9817 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				539DF0B20E32123F137DB6F9 /* Pods-Keno.debug.xcconfig */,
+				44650D96D3C94FF7FD79DAAA /* Pods-Keno.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF08971C1D739164006839E6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFB14E181D74ABE900B035D1 /* LoginController.swift */,
+				EFB14E1D1D74AE1A00B035D1 /* WelcomeController.swift */,
 				EFB6E3701D737027008749F0 /* KenoController.swift */,
 			);
 			name = Controllers;
@@ -57,10 +105,42 @@
 		EF08971E1D739181006839E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EF3954D91D76A70E00162D7D /* Sounds */,
+				EF3954D31D7690C400162D7D /* casino.mp3 */,
 				EFB6E3751D737027008749F0 /* Assets.xcassets */,
 				EFB6E37A1D737027008749F0 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		EF3954D91D76A70E00162D7D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				EF3954E21D76B61A00162D7D /* cash.mp3 */,
+				EF3954E01D76B37400162D7D /* hit.mp3 */,
+				EF3954DE1D76B1EC00162D7D /* miss.mp3 */,
+				EF3954DC1D76AC9100162D7D /* start.mp3 */,
+				EF3954DA1D76A71A00162D7D /* undo.mp3 */,
+				EF3954D71D76A2AE00162D7D /* error.mp3 */,
+				EF3954D51D76A07D00162D7D /* bet.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		EF71FF921D74C7BF006DB87F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFB14E1C1D74ACC600B035D1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EF71FF8A1D74BDDF006DB87F /* System.swift */,
+				EFB14E1A1D74ACC300B035D1 /* UserInterface.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		EFB6E3621D737027008749F0 = {
@@ -68,6 +148,8 @@
 			children = (
 				EFB6E36D1D737027008749F0 /* Keno */,
 				EFB6E36C1D737027008749F0 /* Products */,
+				B1ABF949CAD64D081F6C9817 /* Pods */,
+				83F517113FAD5375EE8FDD4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +165,11 @@
 			isa = PBXGroup;
 			children = (
 				EFB6E36E1D737027008749F0 /* AppDelegate.swift */,
+				EFB14E1C1D74ACC600B035D1 /* Services */,
 				EF08971C1D739164006839E6 /* Controllers */,
 				EFB6E3821D73709A008749F0 /* Models */,
 				EF08971D1D739171006839E6 /* Views */,
+				EF71FF921D74C7BF006DB87F /* Frameworks */,
 				EF08971E1D739181006839E6 /* Resources */,
 			);
 			path = Keno;
@@ -106,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFB6E37D1D737027008749F0 /* Build configuration list for PBXNativeTarget "Keno" */;
 			buildPhases = (
+				D1BE927CC2DB4F64DFACA3EB /* [CP] Check Pods Manifest.lock */,
 				EFB6E3671D737027008749F0 /* Sources */,
 				EFB6E3681D737027008749F0 /* Frameworks */,
 				EFB6E3691D737027008749F0 /* Resources */,
+				5CAA354EF3A128B0E9D0AE9A /* [CP] Embed Pods Frameworks */,
+				43DDAEF888313EFEB2071A58 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,22 +244,82 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3954DB1D76A71A00162D7D /* undo.mp3 in Resources */,
 				EFB6E3791D737027008749F0 /* LaunchScreen.storyboard in Resources */,
+				EF3954DF1D76B1EC00162D7D /* miss.mp3 in Resources */,
+				EF3954D41D7690C400162D7D /* casino.mp3 in Resources */,
+				EF3954E11D76B37400162D7D /* hit.mp3 in Resources */,
+				EF3954D61D76A07D00162D7D /* bet.mp3 in Resources */,
 				EFB6E3761D737027008749F0 /* Assets.xcassets in Resources */,
+				EF3954DD1D76AC9100162D7D /* start.mp3 in Resources */,
+				EF3954E31D76B61A00162D7D /* cash.mp3 in Resources */,
 				EFB6E3741D737027008749F0 /* Main.storyboard in Resources */,
+				EF3954D81D76A2AE00162D7D /* error.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43DDAEF888313EFEB2071A58 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Keno/Pods-Keno-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CAA354EF3A128B0E9D0AE9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Keno/Pods-Keno-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1BE927CC2DB4F64DFACA3EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EFB6E3671D737027008749F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB14E1E1D74AE1A00B035D1 /* WelcomeController.swift in Sources */,
+				EF71FF8B1D74BDDF006DB87F /* System.swift in Sources */,
 				EFB6E3811D737091008749F0 /* Models.swift in Sources */,
+				EFB14E191D74ABE900B035D1 /* LoginController.swift in Sources */,
 				EFB6E3711D737027008749F0 /* KenoController.swift in Sources */,
 				EFB6E36F1D737027008749F0 /* AppDelegate.swift in Sources */,
+				EFB14E1B1D74ACC300B035D1 /* UserInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +432,7 @@
 		};
 		EFB6E37E1D737027008749F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 539DF0B20E32123F137DB6F9 /* Pods-Keno.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Keno/Info.plist;
@@ -296,6 +444,7 @@
 		};
 		EFB6E37F1D737027008749F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44650D96D3C94FF7FD79DAAA /* Pods-Keno.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Keno/Info.plist;

@@ -1,0 +1,43 @@
+PODS:
+  - JellySlider (0.1.0)
+  - LTMorphingLabel (0.2.1)
+  - Money (1.7.0):
+    - ValueCoding
+  - SnapKit (0.22.0)
+  - TGPControls (2.0.0)
+  - THLabel (1.4.7)
+  - ValueCoding (1.3.0)
+  - ZFRippleButton (0.5.1)
+
+DEPENDENCIES:
+  - JellySlider
+  - LTMorphingLabel
+  - Money
+  - SnapKit
+  - TGPControls
+  - THLabel (from `https://github.com/tobihagemann/THLabel.git`, branch `ibdesignable`)
+  - ZFRippleButton
+
+EXTERNAL SOURCES:
+  THLabel:
+    :branch: ibdesignable
+    :git: https://github.com/tobihagemann/THLabel.git
+
+CHECKOUT OPTIONS:
+  THLabel:
+    :commit: 01a3437341ab5e54d02f49bdf50e26be639aa512
+    :git: https://github.com/tobihagemann/THLabel.git
+
+SPEC CHECKSUMS:
+  JellySlider: 5df2fc71b8f9e27fef4a43e3953b885f90566a65
+  LTMorphingLabel: 1858358ea38ef4d548e1f58b648b0d08ec3a62ed
+  Money: f46c3c8fcaf7afa35f2ee3edaeba58335fd5b669
+  SnapKit: 0dd2fd157330f1ea11fd84da13e6be8a7a22bae0
+  TGPControls: feb3210f617691690994d0ddfe37884150b6de9a
+  THLabel: 1a23e71d7738abfeacaf22ab409b981209b105ae
+  ValueCoding: 9c9ed6ecdb9cc37f1a8d3fd9f5756953caf5a869
+  ZFRippleButton: 263bdf4e31dabd5826133b121d9ff908c87a6a11
+
+PODFILE CHECKSUM: 6ce4a78f269c7d031c88fddc963f7c9875e8c579
+
+COCOAPODS: 1.0.1
