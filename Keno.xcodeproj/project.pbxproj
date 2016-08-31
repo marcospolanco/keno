@@ -17,6 +17,7 @@
 		EF3954E11D76B37400162D7D /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF3954E01D76B37400162D7D /* hit.mp3 */; };
 		EF3954E31D76B61A00162D7D /* cash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF3954E21D76B61A00162D7D /* cash.mp3 */; };
 		EF71FF8B1D74BDDF006DB87F /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71FF8A1D74BDDF006DB87F /* System.swift */; };
+		EF7734441D775A0800480E65 /* KenoCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7734421D775A0800480E65 /* KenoCollection.storyboard */; };
 		EFB14E191D74ABE900B035D1 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB14E181D74ABE900B035D1 /* LoginController.swift */; };
 		EFB14E1B1D74ACC300B035D1 /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB14E1A1D74ACC300B035D1 /* UserInterface.swift */; };
 		EFB14E1E1D74AE1A00B035D1 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB14E1D1D74AE1A00B035D1 /* MainController.swift */; };
@@ -41,6 +42,7 @@
 		EF3954E01D76B37400162D7D /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
 		EF3954E21D76B61A00162D7D /* cash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cash.mp3; sourceTree = "<group>"; };
 		EF71FF8A1D74BDDF006DB87F /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		EF7734431D775A0800480E65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/KenoCollection.storyboard; sourceTree = "<group>"; };
 		EFB14E181D74ABE900B035D1 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EFB14E1A1D74ACC300B035D1 /* UserInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
 		EFB14E1D1D74AE1A00B035D1 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				EFB6E3771D737027008749F0 /* LaunchScreen.storyboard */,
 				EFB6E3721D737027008749F0 /* Main.storyboard */,
+				EF7734421D775A0800480E65 /* KenoCollection.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF3954DB1D76A71A00162D7D /* undo.mp3 in Resources */,
+				EF7734441D775A0800480E65 /* KenoCollection.storyboard in Resources */,
 				EFB6E3791D737027008749F0 /* LaunchScreen.storyboard in Resources */,
 				EF3954DF1D76B1EC00162D7D /* miss.mp3 in Resources */,
 				EF3954D41D7690C400162D7D /* casino.mp3 in Resources */,
@@ -326,6 +330,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		EF7734421D775A0800480E65 /* KenoCollection.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF7734431D775A0800480E65 /* Base */,
+			);
+			name = KenoCollection.storyboard;
+			sourceTree = "<group>";
+		};
 		EFB6E3721D737027008749F0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

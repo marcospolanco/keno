@@ -93,62 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BXw-Y0-BuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1713" y="860"/>
-        </scene>
-        <!--Welcome Controller-->
-        <scene sceneID="kjV-2t-TyF">
-            <objects>
-                <viewController id="7AG-VI-QQi" customClass="WelcomeController" customModule="Keno" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kcQ-PA-g1b"/>
-                        <viewControllerLayoutGuide type="bottom" id="W7Z-Ju-OcI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VR3-JC-FLZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="4k9-QM-isc">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6e-L6-S0F" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                <rect key="frame" x="120" y="312" width="361" height="112"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="H6e-L6-S0F" secondAttribute="height" multiplier="257:115" id="t2v-3R-BeT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="35"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adp-1z-q5e">
-                                <rect key="frame" x="155" y="519" width="104" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="IH5-3R-fZT"/>
-                                    <constraint firstAttribute="width" constant="104" id="p1e-SR-zSn"/>
-                                </constraints>
-                                <state key="normal" title="Play Keno!"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="H6e-L6-S0F" firstAttribute="centerX" secondItem="VR3-JC-FLZ" secondAttribute="centerX" id="9h4-Hg-D7S"/>
-                            <constraint firstItem="Adp-1z-q5e" firstAttribute="centerX" secondItem="VR3-JC-FLZ" secondAttribute="centerX" id="JSY-S5-GAJ"/>
-                            <constraint firstItem="H6e-L6-S0F" firstAttribute="width" secondItem="VR3-JC-FLZ" secondAttribute="width" multiplier="0.6" id="UCx-wQ-Ue0"/>
-                            <constraint firstItem="H6e-L6-S0F" firstAttribute="centerY" secondItem="VR3-JC-FLZ" secondAttribute="centerY" id="WTC-H0-3Ju"/>
-                            <constraint firstItem="4k9-QM-isc" firstAttribute="leading" secondItem="VR3-JC-FLZ" secondAttribute="leading" id="cUr-vC-RT0"/>
-                            <constraint firstItem="4k9-QM-isc" firstAttribute="top" secondItem="kcQ-PA-g1b" secondAttribute="bottom" id="gdq-EJ-L88"/>
-                            <constraint firstItem="Adp-1z-q5e" firstAttribute="top" secondItem="H6e-L6-S0F" secondAttribute="bottom" constant="95" id="otP-oA-YJS"/>
-                            <constraint firstAttribute="trailing" secondItem="4k9-QM-isc" secondAttribute="trailing" id="rHw-DL-9JP"/>
-                            <constraint firstItem="W7Z-Ju-OcI" firstAttribute="top" secondItem="4k9-QM-isc" secondAttribute="bottom" id="sNu-NO-7v7"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <outlet property="balanceLabel" destination="H6e-L6-S0F" id="Yr4-ro-caz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R56-JS-cAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="457" y="1185"/>
+            <point key="canvasLocation" x="1017" y="386"/>
         </scene>
         <!--Keno Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -164,25 +109,20 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y8y-Hb-22a" userLabel="Main Screen">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <connections>
-                                    <segue destination="61V-cj-sZB" kind="embed" id="JNB-GY-GBu"/>
-                                </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCG-fb-MZi" userLabel="Login Screen">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <connections>
-                                    <segue destination="CfL-Ci-pen" kind="embed" id="1Sl-ND-l1P"/>
-                                </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5G-6V-4TY" userLabel="Keno Area">
-                                <rect key="frame" x="0.0" y="64" width="0.0" height="0.0"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5G-6V-4TY" userLabel="Keno Area">
+                                <rect key="frame" x="0.0" y="64" width="414" height="414"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kks-rp-PWN">
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kks-rp-PWN">
+                                        <rect key="frame" x="6" y="6" width="402" height="402"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="kks-rp-PWN" secondAttribute="height" multiplier="1:1" id="0nH-QH-AwN"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="Anc-xu-gtY" kind="embed" id="7uz-8Q-Uqe"/>
+                                            <segue destination="Anc-xu-gtY" kind="embed" id="A3y-Tb-s8l"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -307,13 +247,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="364"/>
+            <point key="canvasLocation" x="2123" y="386"/>
         </scene>
         <!--Keno Collection Controller-->
         <scene sceneID="eVY-IJ-ZOg">
             <objects>
                 <collectionViewController id="Anc-xu-gtY" customClass="KenoCollectionController" customModule="Keno" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="S2o-pH-99p">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="402"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Jx5-QV-6M7">
                             <size key="itemSize" width="50" height="50"/>
@@ -323,11 +264,13 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KenoCollectionViewCell" id="7jR-yy-u1d" customClass="KenoCollectionViewCell" customModule="Keno" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="REi-7w-Swn" customClass="KenoLabel" customModule="Keno" customModuleProvider="target">
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="REi-7w-Swn" customClass="KenoLabel" customModule="Keno" customModuleProvider="target">
                                             <rect key="frame" x="2" y="0.0" width="45" height="50"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -381,21 +324,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1U-Fj-IfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="1115"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="DQA-9G-MsP">
-            <objects>
-                <navigationController id="Yzw-3r-s1Y" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sc9-1k-Yy8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NCr-Fi-Wcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="890" y="-505"/>
+            <point key="canvasLocation" x="2123" y="1122"/>
         </scene>
         <!--Main Controller-->
         <scene sceneID="mRF-3a-sYR">
@@ -409,8 +338,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PtD-3N-MAT" userLabel="Keno Area">
-                                <rect key="frame" x="0.0" y="64" width="0.0" height="0.0"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PtD-3N-MAT" userLabel="Keno Area">
+                                <rect key="frame" x="0.0" y="64" width="414" height="414"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PtD-3N-MAT" secondAttribute="height" multiplier="1:1" id="RKE-Wn-Da4"/>
@@ -508,14 +437,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oMM-D2-wlw" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1739" y="-208"/>
+            <point key="canvasLocation" x="1595" y="386"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="welcome" width="750" height="1334"/>
-    </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="4dk-jD-pqs"/>
-        <segue reference="YAW-LQ-IFw"/>
-    </inferredMetricsTieBreakers>
 </document>
