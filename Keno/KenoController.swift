@@ -152,9 +152,7 @@ class KenoController: UIViewController {
     }
 
     @IBAction func changeBet(value: Float) {
-        if self.player.wallet.available() >= Double(value) {
-            self.betLabel.text = "Bet: \(Double(value).asUSD())"
-        }
+        self.betLabel.text = "Bet: \(Double(value).asUSD())"
     }
     
     func createBoard() {

@@ -10,7 +10,7 @@
 
 import Foundation
 
-let DEFAULT_BALANCE = 2.0     //default balance in a wallet
+let DEFAULT_BALANCE = 500.0     //default balance in a wallet
 let DRAWING_COUNT = 15          //the number of draws for Keno machine
 let BETTING_COUNT = 10          //the number of bets the user must make
 var NUMBERS_COUNT = 25          //the number of numbers on our board; this is just default...can vary, but 16 is minimum
