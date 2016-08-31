@@ -19,7 +19,7 @@
 		EF71FF8B1D74BDDF006DB87F /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71FF8A1D74BDDF006DB87F /* System.swift */; };
 		EFB14E191D74ABE900B035D1 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB14E181D74ABE900B035D1 /* LoginController.swift */; };
 		EFB14E1B1D74ACC300B035D1 /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB14E1A1D74ACC300B035D1 /* UserInterface.swift */; };
-		EFB14E1E1D74AE1A00B035D1 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB14E1D1D74AE1A00B035D1 /* WelcomeController.swift */; };
+		EFB14E1E1D74AE1A00B035D1 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB14E1D1D74AE1A00B035D1 /* MainController.swift */; };
 		EFB6E36F1D737027008749F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E36E1D737027008749F0 /* AppDelegate.swift */; };
 		EFB6E3711D737027008749F0 /* KenoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E3701D737027008749F0 /* KenoController.swift */; };
 		EFB6E3741D737027008749F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB6E3721D737027008749F0 /* Main.storyboard */; };
@@ -43,7 +43,7 @@
 		EF71FF8A1D74BDDF006DB87F /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
 		EFB14E181D74ABE900B035D1 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EFB14E1A1D74ACC300B035D1 /* UserInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
-		EFB14E1D1D74AE1A00B035D1 /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		EFB14E1D1D74AE1A00B035D1 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		EFB6E36B1D737027008749F0 /* Keno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB6E36E1D737027008749F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFB6E3701D737027008749F0 /* KenoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenoController.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				EFB14E181D74ABE900B035D1 /* LoginController.swift */,
-				EFB14E1D1D74AE1A00B035D1 /* WelcomeController.swift */,
+				EFB14E1D1D74AE1A00B035D1 /* MainController.swift */,
 				EFB6E3701D737027008749F0 /* KenoController.swift */,
 			);
 			name = Controllers;
@@ -313,7 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFB14E1E1D74AE1A00B035D1 /* WelcomeController.swift in Sources */,
+				EFB14E1E1D74AE1A00B035D1 /* MainController.swift in Sources */,
 				EF71FF8B1D74BDDF006DB87F /* System.swift in Sources */,
 				EFB6E3811D737091008749F0 /* Models.swift in Sources */,
 				EFB14E191D74ABE900B035D1 /* LoginController.swift in Sources */,

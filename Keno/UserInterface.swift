@@ -81,6 +81,15 @@ extension UIViewController {
     }
 }
 
+extension UIViewController {
+    func dismissEmbeddedController() {
+        self.willMoveToParentViewController(nil)
+        self.view.superview?.removeFromSuperview()  //this is the container view
+        self.view.removeFromSuperview()             //this is the controller's root view
+        self.removeFromParentViewController()
+    }
+}
+
 //Definies the look of each tile on the Keno board
 class KenoLabel: THLabel {
     override func awakeFromNib() {

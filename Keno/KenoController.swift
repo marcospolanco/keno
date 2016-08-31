@@ -22,7 +22,7 @@ class KenoController: UIViewController {
     //The possible states of play.
     enum GameState: String {
         case NotPlaying = "Play Keno!"  //Before the user starts playing
-        case Betting = "Place Bets!"    //While they are placing bets
+        case Betting = "Pick Numbers!"    //While they are placing bets
         case Drawing = "Get Lucky!"     //While the machine is drawing
         case GameOver = "Game Over!"    //When the user has no more money
     }
@@ -195,6 +195,8 @@ class KenoController: UIViewController {
         //add the number to the drawing
         self.drawing?[drawsource[index]] = true
         
+        print(self.drawing?.keys.map{num in "\(num):"}.sort{$0 < $1}.reduce("", combine: +))
+
         if Player.isLoggedIn {
             self.selected[drawsource[index]] != nil ? Sounds.Hit.play() : Sounds.Miss.play()
         }
@@ -249,6 +251,7 @@ class KenoController: UIViewController {
         //clear out the drawing and perform the drawing from the keno.draw
         self.drawing = [Int:Bool]()
         self.drawsource = Array(keno.draw(DRAWING_COUNT).keys)
+        print(drawsource.map{num in "\(num):"}.sort{$0 < $1}.reduce("", combine: +))
         self.index = 0
         self.playButton.enabled = false //disable the button until the drawing
         self.performDrawing()
@@ -309,18 +312,18 @@ class KenoCollectionController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(KenoCollectionViewCell.reuseIdentifier, forIndexPath: indexPath) as! KenoCollectionViewCell
 
         //establish the status of the cell
-        let selected = kenoController?.selected[indexPath.row] ?? false
+        let selected = kenoController?.selected[indexPath.row + 1] ?? false
         
         //hold whether we hit or missed the drawing. Leave it nil otherwise
         var drawn: Bool?
         
         //if we have a drawing, then was this cell in it?
-        if let drawing = kenoController?.drawing where drawing[indexPath.row] != nil {
+        if let drawing = kenoController?.drawing where drawing[indexPath.row + 1] != nil {
             //if so, then hit if we selected the number
             drawn = selected
         }
         
-        cell.load(indexPath.row, selected: selected, drawn:drawn, drawing: kenoController?.drawing != nil)
+        cell.load(indexPath.row + 1, selected: selected, drawn:drawn, drawing: kenoController?.drawing != nil)
         
         return cell
     }
@@ -331,7 +334,7 @@ class KenoCollectionController: UICollectionViewController {
             //the buttons are only active if we are betting
             if kenoController.state == .Betting || kenoController.state == .Drawing {
 
-                kenoController.bet(indexPath.row)
+                kenoController.bet(indexPath.row + 1)
                 collectionView.reloadItemsAtIndexPaths([indexPath])//reload the looks!
             }
         }
@@ -358,7 +361,7 @@ class KenoCollectionViewCell: UICollectionViewCell {
     //states: miss / hit / select / unselect
     //load a particular number into the cell
     func load(number: Int, selected: Bool, drawn:Bool? = nil, drawing: Bool) {
-        self.label.text = (number + 1).description
+        self.label.text = (number).description
         if let drawn = drawn {
             //animate green if we hit or red if we did not
             self.label.backgroundColor = drawn ? Colors.darkStrong : Colors.liteStrong
