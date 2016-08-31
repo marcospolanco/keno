@@ -46,8 +46,8 @@ class LoginController: UIViewController {
         
         if let kenoController = kenoController where kenoController.state == .NotPlaying {
             Threads.onMain{
-//                kenoController.state = .Drawing
-//                kenoController.playAction(self)
+                kenoController.state = .Drawing
+                kenoController.playAction(self)
             }
         }
     }

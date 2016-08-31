@@ -529,11 +529,11 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="zg0-qU-Z5e"/>
-                                        <exclude reference="Caf-uC-a05"/>
-                                        <exclude reference="9XY-Jr-a4O"/>
-                                        <exclude reference="d4l-ar-SmS"/>
                                         <exclude reference="9RS-6S-zx6"/>
+                                        <exclude reference="9XY-Jr-a4O"/>
+                                        <exclude reference="Caf-uC-a05"/>
+                                        <exclude reference="d4l-ar-SmS"/>
+                                        <exclude reference="zg0-qU-Z5e"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -569,9 +569,9 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
+                                                        <exclude reference="AvB-tg-jmV"/>
                                                         <exclude reference="RYw-Q1-mC0"/>
                                                         <exclude reference="ll8-g2-gcd"/>
-                                                        <exclude reference="AvB-tg-jmV"/>
                                                     </mask>
                                                 </variation>
                                             </view>
