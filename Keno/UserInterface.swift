@@ -98,3 +98,21 @@ class KenoLabel: THLabel {
         self.layer.borderColor = Colors.liteLight.CGColor
     }
 }
+
+typealias ChoiceOK = (Bool) -> Void
+
+func presentChoice(controller: UIViewController, title:String, message: String, completion: ChoiceOK) {
+    dispatch_async(dispatch_get_main_queue()) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action: UIAlertAction!) in
+            completion(true)
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .Default, handler: { (action: UIAlertAction!) in
+            completion(false)
+        }))
+        
+        controller.presentViewController(alert, animated: true, completion: nil)
+    }
+}
+

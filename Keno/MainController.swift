@@ -26,7 +26,7 @@ class MainController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.balanceLabel.text = Player.player?.wallet.available().asUSD()
+        self.balanceLabel.text = "Balance: \(Player.player?.wallet.available().asUSD() ?? "")"
     }
     
     @IBAction func playAction(sender: AnyObject) {

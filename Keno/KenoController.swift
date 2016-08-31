@@ -31,7 +31,7 @@ class KenoController: UIViewController {
     @IBOutlet weak var balanceLabel: THLabel!
     @IBOutlet weak var betLabel: THLabel!
     @IBOutlet weak var playButton: ZFRippleButton!
-    
+    @IBOutlet weak var controlArea: UIView!
     
     var betSlider = JellySlider()
     
@@ -70,15 +70,17 @@ class KenoController: UIViewController {
         self.style()
         self.kenoBorder.backgroundColor = Colors.liteLight
         
-        self.balanceLabel.text = player.wallet.available().asUSD()
+        self.balanceLabel.text = "Balance: \(player.wallet.available().asUSD())"
         
         //set the slider to max out at the balance or $50, whichever is slower
         self.maximumBet = player.wallet.available() >= MAXIMUM_BET ? Float(MAXIMUM_BET) : Float(player.wallet.available())
         
         //Since we adjusted the maximum, update the bet label accordingly by simulating the same user action
         let amount = amountFromSlider(self.betSlider.value)
-        if amount > self.maximumBet {
-            self.changeBet(amount)
+        if amount >= self.maximumBet {
+            self.changeBet(self.maximumBet)
+        } else {
+            print("")
         }
         
         //enforce rule of a minimum $1 bet. If player under that, game over
@@ -117,15 +119,19 @@ class KenoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Player.player = Player(username:"", password:"")//DONOTSHIP - Here only for testing
+        if Player.player == nil {
+            Player.player = Player(username:"", password:"")//DONOTSHIP - Here only for testing
+        }
 
         self.navigationController?.navigationBarHidden = true
         
-        self.playButton.setTitleColor(Colors.liteLight, forState: .Normal)
+        self.playButton.setTitleColor(Colors.darkStrong, forState: .Normal)
         self.playButton.rippleColor = Colors.darkMedium
-        self.playButton.backgroundColor = Colors.darkLight
-        self.playButton.rippleOverBounds = true
+        self.playButton.backgroundColor = Colors.liteMedium
+        self.playButton.rippleOverBounds = false
         self.playButton.layer.cornerRadius = self.playButton.frame.height/2.0
+        
+        self.controlArea.backgroundColor = Colors.liteStrong
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -147,7 +153,7 @@ class KenoController: UIViewController {
 
     @IBAction func changeBet(value: Float) {
         if self.player.wallet.available() >= Double(value) {
-            self.betLabel.text = Double(value).asUSD()
+            self.betLabel.text = "Bet: \(Double(value).asUSD())"
         }
     }
     
@@ -168,7 +174,13 @@ class KenoController: UIViewController {
         case .Betting:
             fatalError() // this should not happen, as the button should be disabled
         case .Drawing:
+            
+            if let text = self.betLabel.text where text.containsString("Tap") {
+                if Player.isLoggedIn {return}
+            }
+            
             if Player.isLoggedIn {Sounds.Start.play()}
+
             self.performSelector(#selector(startDrawing), withObject: nil, afterDelay: DRAWING_INTERVAL)
         case .GameOver:
             fatalError() //should never happen, since button is disabled when game over
@@ -195,7 +207,7 @@ class KenoController: UIViewController {
         //add the number to the drawing
         self.drawing?[drawsource[index]] = true
         
-        print(self.drawing?.keys.map{num in "\(num):"}.sort{$0 < $1}.reduce("", combine: +))
+        //print(self.drawing?.keys.map{num in "\(num):"}.sort{$0 < $1}.reduce("", combine: +))
 
         if Player.isLoggedIn {
             self.selected[drawsource[index]] != nil ? Sounds.Hit.play() : Sounds.Miss.play()
@@ -224,7 +236,7 @@ class KenoController: UIViewController {
     @objc private func finishDrawing() {
         
         //construct the bet. Notice agressive unwrapping, since we know the values are numeric
-        if let bet = self.player.wallet.bet(Double(self.betSlider.value), numbers: self.selected) {
+        if let bet = self.player.wallet.bet(Double(amountFromSlider(self.betSlider.value)), numbers: self.selected) {
             //emit payouts.
             let payout = self.keno.payout(bet, drawing: drawing!) //we can unwrap because we just drew
             
@@ -242,6 +254,16 @@ class KenoController: UIViewController {
         self.playButton.enabled = true
 
         Sounds.Cash.play()
+        
+        if Player.player?.wallet.available() > MINIMUM_BET {
+            presentChoice(self, title: "Play Again?", message: "") {again in
+                if !again {
+                    self.navigationController?.popViewControllerAnimated(true)
+                }
+            }
+        } else {
+            //you ran out of money.
+        }
     }
     
     var index = 0
@@ -251,7 +273,7 @@ class KenoController: UIViewController {
         //clear out the drawing and perform the drawing from the keno.draw
         self.drawing = [Int:Bool]()
         self.drawsource = Array(keno.draw(DRAWING_COUNT).keys)
-        print(drawsource.map{num in "\(num):"}.sort{$0 < $1}.reduce("", combine: +))
+        //print(drawsource.map{num in "\(num):"}.sort{$0 < $1}.reduce("", combine: +))
         self.index = 0
         self.playButton.enabled = false //disable the button until the drawing
         self.performDrawing()
@@ -366,13 +388,13 @@ class KenoCollectionViewCell: UICollectionViewCell {
             //animate green if we hit or red if we did not
             self.label.backgroundColor = drawn ? Colors.darkStrong : Colors.liteStrong
             self.label.layer.borderColor = drawn ? UIColor.greenColor().CGColor : Colors.liteStrong.CGColor
-            self.label.alpha = drawn ? 1.0 : 0.4
+            //self.label.alpha = drawn ? 1.0 : 0.4
             self.label.textColor = drawn ? .whiteColor() : .whiteColor()
         } else {
             self.label.layer.borderColor = Colors.liteLight.CGColor
             self.label.textColor = selected ?  .whiteColor() : .whiteColor()
-            self.label.backgroundColor = selected ? Colors.darkLight : Colors.liteLight
-            self.label.alpha = drawing ? 0.2 : 1.0
+            self.label.backgroundColor = selected ? Colors.darkMedium : Colors.liteLight
+            //self.label.alpha = drawing ? 0.2 : 1.0
         }
     }
 }

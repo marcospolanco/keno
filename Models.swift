@@ -10,10 +10,10 @@
 
 import Foundation
 
-let DEFAULT_BALANCE = 100.0     //default balance in a wallet
+let DEFAULT_BALANCE = 2.0     //default balance in a wallet
 let DRAWING_COUNT = 15          //the number of draws for Keno machine
 let BETTING_COUNT = 10          //the number of bets the user must make
-var NUMBERS_COUNT = 25          //the number of numbers on our board; this is just default...can vary!
+var NUMBERS_COUNT = 25          //the number of numbers on our board; this is just default...can vary, but 16 is minimum
 let NUMBERS_MAX = 10            //sqrt of the highest number of board items
 let MINIMUM_BET: Double = 1     //minimum dollar amount of a bet
 let MAXIMUM_BET: Double = 50.0    //minimum dollar amount of a bet
@@ -55,13 +55,19 @@ class Wallet {
     func bet(amount: Double, numbers:[Int:Bool]) -> Bet? {
         //ensure the are 10 unique numbers in the bet
         guard numbers.count == BETTING_COUNT
-            else {return nil}
+            else {
+                return nil
+        }
         
         //ensure that the bet amount is more than minimum and less than balance
-        guard amount >= MINIMUM_BET  && amount <= self.balance else {return nil}
+        guard amount >= MINIMUM_BET  && amount <= self.balance else {
+            return nil
+        }
         
         //ensure that the bet amount is less than or equal to MAXIMUM_BET
-        guard amount <= MAXIMUM_BET  else {return nil}
+        guard amount <= MAXIMUM_BET  else {
+            return nil
+        }
         
         //deduct the amount from the balance
         self.balance -= amount

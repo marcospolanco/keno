@@ -31,7 +31,7 @@ class LoginController: UIViewController {
         loginButton.setTitleColor(Colors.liteLight, forState: .Normal)
         loginButton.backgroundColor = Colors.darkStrong
         loginButton.rippleColor = Colors.darkMedium
-        loginButton.rippleOverBounds = true
+        loginButton.rippleOverBounds = false
         loginButton.rippleBackgroundColor = Colors.darkLight
     }
     
@@ -46,8 +46,8 @@ class LoginController: UIViewController {
         
         if let kenoController = kenoController where kenoController.state == .NotPlaying {
             Threads.onMain{
-//                kenoController.state = .Drawing
-//                kenoController.playAction(self)
+                kenoController.state = .Drawing
+                kenoController.playAction(self)
             }
         }
     }
@@ -56,7 +56,7 @@ class LoginController: UIViewController {
     @IBAction func login(sender: AnyObject) {
         
         //cancel the animation
-//        self.kenoController?.cancelDrawing()
+        self.kenoController?.cancelDrawing()
         
         //flag that the user has logged in,
         Player.isLoggedIn = true

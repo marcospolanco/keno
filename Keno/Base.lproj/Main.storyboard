@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="CfL-Ci-pen" kind="relationship" relationship="rootViewController" id="4dk-jD-pqs"/>
+                        <segue destination="0Fh-3b-Qng" kind="relationship" relationship="rootViewController" id="LpS-Pr-EYc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EqI-Qc-xaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -32,7 +32,7 @@
                         <viewControllerLayoutGuide type="top" id="ecQ-kD-7kS"/>
                         <viewControllerLayoutGuide type="bottom" id="vBb-Bm-EA6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kbb-DF-kHU">
+                    <view key="view" alpha="0.80000000000000004" contentMode="scaleToFill" id="kbb-DF-kHU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -62,7 +62,7 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aiz-kF-obj" firstAttribute="width" secondItem="8TV-I1-V7n" secondAttribute="width" id="1g3-u7-FT5"/>
                             <constraint firstItem="8TV-I1-V7n" firstAttribute="width" secondItem="kbb-DF-kHU" secondAttribute="width" multiplier="0.5" id="2ig-dT-tDF"/>
@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BXw-Y0-BuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="386"/>
+            <point key="canvasLocation" x="1007" y="1295"/>
         </scene>
         <!--Keno Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -113,11 +113,10 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCG-fb-MZi" userLabel="Login Screen">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5G-6V-4TY" userLabel="Keno Area">
-                                <rect key="frame" x="0.0" y="64" width="414" height="414"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5G-6V-4TY" userLabel="Keno Area">
+                                <rect key="frame" x="0.0" y="64" width="0.0" height="0.0"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kks-rp-PWN">
-                                        <rect key="frame" x="6" y="6" width="402" height="402"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kks-rp-PWN">
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="kks-rp-PWN" secondAttribute="height" multiplier="1:1" id="0nH-QH-AwN"/>
                                         </constraints>
@@ -148,67 +147,110 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AX2-fq-P2b" userLabel="Control Area">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AX2-fq-P2b" userLabel="Control Area">
                                 <rect key="frame" x="0.0" y="478" width="414" height="258"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aes-d7-epp">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="322"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjj-Rq-QJG" customClass="ZFRippleButton" customModule="ZFRippleButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
-                                                <state key="normal" title="Play Keno!"/>
-                                                <connections>
-                                                    <action selector="playAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Art-rb-Flj"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBl-5T-aJu" userLabel="Balance" customClass="THLabel">
-                                                <rect key="frame" x="0.0" y="86" width="414" height="86"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="innerShadowColor">
-                                                        <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="innerShadowOffset">
-                                                        <size key="value" width="6" height="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="innerShadowBlur">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                                        <color key="value" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </label>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your bet?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5F-U2-9dZ" userLabel="Bet" customClass="THLabel">
-                                                <rect key="frame" x="0.0" y="172" width="414" height="86"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="innerShadowColor">
-                                                        <color key="value" red="0.0" green="0.72156862749999995" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="innerShadowOffset">
-                                                        <size key="value" width="1" height="6"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
-                                                        <real key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="innerShadowBlur">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                                        <color key="value" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEg-Fb-uge">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjj-Rq-QJG" customClass="ZFRippleButton" customModule="ZFRippleButton">
+                                                        <rect key="frame" x="43" y="9" width="328" height="68"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="jjj-Rq-QJG" secondAttribute="height" multiplier="207:43" id="41G-Vt-Gi1"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
+                                                        <state key="normal" title="Play Keno!"/>
+                                                        <connections>
+                                                            <action selector="playAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Art-rb-Flj"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="jjj-Rq-QJG" firstAttribute="width" secondItem="EEg-Fb-uge" secondAttribute="height" multiplier="9:10" id="49b-mF-Jzd"/>
+                                                    <constraint firstItem="jjj-Rq-QJG" firstAttribute="height" secondItem="EEg-Fb-uge" secondAttribute="height" id="b3q-NW-Bcp"/>
+                                                    <constraint firstItem="jjj-Rq-QJG" firstAttribute="width" secondItem="EEg-Fb-uge" secondAttribute="width" id="dci-O5-yyO"/>
+                                                    <constraint firstItem="jjj-Rq-QJG" firstAttribute="height" secondItem="EEg-Fb-uge" secondAttribute="height" multiplier="0.8" id="dqE-lU-6py"/>
+                                                    <constraint firstItem="jjj-Rq-QJG" firstAttribute="centerY" secondItem="EEg-Fb-uge" secondAttribute="centerY" id="jo1-Sb-hcv"/>
+                                                    <constraint firstItem="jjj-Rq-QJG" firstAttribute="centerX" secondItem="EEg-Fb-uge" secondAttribute="centerX" id="vxy-tY-1Fl"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="49b-mF-Jzd"/>
+                                                        <exclude reference="b3q-NW-Bcp"/>
+                                                        <exclude reference="dci-O5-yyO"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62b-zu-KKw">
+                                                <rect key="frame" x="0.0" y="107" width="414" height="108"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBl-5T-aJu" userLabel="Balance" customClass="THLabel">
+                                                        <rect key="frame" x="161" y="9" width="92" height="68"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="innerShadowColor">
+                                                                <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="innerShadowOffset">
+                                                                <size key="value" width="6" height="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="innerShadowBlur">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                                                <color key="value" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="nBl-5T-aJu" firstAttribute="height" secondItem="62b-zu-KKw" secondAttribute="height" multiplier="0.8" id="BRP-ej-wtm"/>
+                                                    <constraint firstItem="nBl-5T-aJu" firstAttribute="centerY" secondItem="62b-zu-KKw" secondAttribute="centerY" id="RZu-jc-ja7"/>
+                                                    <constraint firstItem="nBl-5T-aJu" firstAttribute="centerX" secondItem="62b-zu-KKw" secondAttribute="centerX" id="hEZ-0m-CdQ"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ToM-Ht-bgF">
+                                                <rect key="frame" x="0.0" y="215" width="414" height="107"/>
+                                                <subviews>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap to Bet!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5F-U2-9dZ" userLabel="Bet" customClass="THLabel">
+                                                        <rect key="frame" x="43" y="9" width="328" height="68"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="a5F-U2-9dZ" secondAttribute="height" multiplier="207:43" id="N4I-bB-00F"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="innerShadowOffset">
+                                                                <size key="value" width="1" height="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                                                <real key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="innerShadowBlur">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="a5F-U2-9dZ" firstAttribute="centerY" secondItem="ToM-Ht-bgF" secondAttribute="centerY" id="ES2-fO-3xD"/>
+                                                    <constraint firstItem="a5F-U2-9dZ" firstAttribute="centerX" secondItem="ToM-Ht-bgF" secondAttribute="centerX" id="Xi1-kv-mod"/>
+                                                    <constraint firstItem="a5F-U2-9dZ" firstAttribute="height" secondItem="ToM-Ht-bgF" secondAttribute="height" multiplier="0.8" id="qID-N3-pc2"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="aes-d7-epp" firstAttribute="top" secondItem="AX2-fq-P2b" secondAttribute="top" id="02s-fj-DIc"/>
                                     <constraint firstAttribute="bottom" secondItem="aes-d7-epp" secondAttribute="bottom" id="7ru-t1-SU8"/>
@@ -241,20 +283,20 @@
                     <connections>
                         <outlet property="balanceLabel" destination="nBl-5T-aJu" id="hdC-hh-Nwt"/>
                         <outlet property="betLabel" destination="a5F-U2-9dZ" id="eHQ-BS-7mK"/>
+                        <outlet property="controlArea" destination="AX2-fq-P2b" id="n0y-qM-2Nt"/>
                         <outlet property="kenoBorder" destination="c5G-6V-4TY" id="QzS-ae-kv8"/>
                         <outlet property="playButton" destination="jjj-Rq-QJG" id="nZS-9f-GtU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2123" y="386"/>
+            <point key="canvasLocation" x="2302" y="359"/>
         </scene>
         <!--Keno Collection Controller-->
         <scene sceneID="eVY-IJ-ZOg">
             <objects>
                 <collectionViewController id="Anc-xu-gtY" customClass="KenoCollectionController" customModule="Keno" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="S2o-pH-99p">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="402"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Jx5-QV-6M7">
                             <size key="itemSize" width="50" height="50"/>
@@ -264,13 +306,11 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KenoCollectionViewCell" id="7jR-yy-u1d" customClass="KenoCollectionViewCell" customModule="Keno" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="REi-7w-Swn" customClass="KenoLabel" customModule="Keno" customModuleProvider="target">
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="REi-7w-Swn" customClass="KenoLabel" customModule="Keno" customModuleProvider="target">
                                             <rect key="frame" x="2" y="0.0" width="45" height="50"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -338,21 +378,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PtD-3N-MAT" userLabel="Keno Area">
-                                <rect key="frame" x="0.0" y="64" width="414" height="414"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PtD-3N-MAT" userLabel="Keno Area">
+                                <rect key="frame" x="0.0" y="64" width="0.0" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PtD-3N-MAT" secondAttribute="height" multiplier="1:1" id="RKE-Wn-Da4"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gf6-Ek-0AT" userLabel="Control Area">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gf6-Ek-0AT" userLabel="Control Area">
                                 <rect key="frame" x="0.0" y="478" width="414" height="258"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vBr-LX-DcM">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="322"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COP-nj-3p9" customClass="ZFRippleButton" customModule="ZFRippleButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                                 <state key="normal" title="Play Keno!"/>
                                                 <connections>
@@ -360,7 +400,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzM-9R-imd" userLabel="Balance" customClass="THLabel">
-                                                <rect key="frame" x="0.0" y="86" width="414" height="86"/>
+                                                <rect key="frame" x="0.0" y="107" width="414" height="108"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -380,7 +420,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DxQ-9Z-omK" userLabel="Bet" customClass="THLabel">
-                                                <rect key="frame" x="0.0" y="172" width="414" height="86"/>
+                                                <rect key="frame" x="0.0" y="215" width="414" height="107"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -437,7 +477,238 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oMM-D2-wlw" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1595" y="386"/>
+            <point key="canvasLocation" x="1657" y="359"/>
+        </scene>
+        <!--KenoCollection-->
+        <scene sceneID="Axv-gA-s0C">
+            <objects>
+                <viewControllerPlaceholder storyboardName="KenoCollection" id="kEK-oJ-7gP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ToD-01-P89" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1450.5" y="885"/>
+        </scene>
+        <!--Keno Controller-->
+        <scene sceneID="YuH-fe-Yno">
+            <objects>
+                <viewController id="0Fh-3b-Qng" customClass="KenoController" customModule="Keno" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SeN-pz-5pO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mll-Tz-40M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="74d-ih-qlc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUh-s9-MGg" userLabel="Main Screen">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0A-1V-sor" userLabel="Keno Area">
+                                <rect key="frame" x="0.0" y="64" width="414" height="414"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMz-e4-Fce">
+                                        <rect key="frame" x="6" y="6" width="402" height="402"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gMz-e4-Fce" secondAttribute="height" multiplier="1:1" id="ii6-ab-hyz"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="kEK-oJ-7gP" kind="embed" id="oXr-9Z-vHU"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gMz-e4-Fce" firstAttribute="width" secondItem="x0A-1V-sor" secondAttribute="height" multiplier="97:100" id="3Ci-Rp-nAK"/>
+                                    <constraint firstItem="gMz-e4-Fce" firstAttribute="centerY" secondItem="x0A-1V-sor" secondAttribute="centerY" id="7Jy-r2-S9b"/>
+                                    <constraint firstItem="gMz-e4-Fce" firstAttribute="width" secondItem="x0A-1V-sor" secondAttribute="height" multiplier="1:1" id="9RS-6S-zx6"/>
+                                    <constraint firstAttribute="bottom" secondItem="gMz-e4-Fce" secondAttribute="bottom" id="9XY-Jr-a4O"/>
+                                    <constraint firstItem="gMz-e4-Fce" firstAttribute="leading" secondItem="x0A-1V-sor" secondAttribute="leading" id="Caf-uC-a05"/>
+                                    <constraint firstAttribute="width" secondItem="x0A-1V-sor" secondAttribute="height" multiplier="1:1" id="WaZ-f6-6ae"/>
+                                    <constraint firstAttribute="trailing" secondItem="gMz-e4-Fce" secondAttribute="trailing" id="d4l-ar-SmS"/>
+                                    <constraint firstItem="gMz-e4-Fce" firstAttribute="centerX" secondItem="x0A-1V-sor" secondAttribute="centerX" id="eeo-EU-LgI"/>
+                                    <constraint firstItem="gMz-e4-Fce" firstAttribute="top" secondItem="x0A-1V-sor" secondAttribute="top" id="zg0-qU-Z5e"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="zg0-qU-Z5e"/>
+                                        <exclude reference="Caf-uC-a05"/>
+                                        <exclude reference="9XY-Jr-a4O"/>
+                                        <exclude reference="d4l-ar-SmS"/>
+                                        <exclude reference="9RS-6S-zx6"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZc-kx-NTB" userLabel="Control Area">
+                                <rect key="frame" x="0.0" y="478" width="414" height="258"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kfl-Mz-Nvl">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ff-Oj-Q20">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQq-0N-hpY" customClass="ZFRippleButton" customModule="ZFRippleButton">
+                                                        <rect key="frame" x="43" y="9" width="328" height="68"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="TQq-0N-hpY" secondAttribute="height" multiplier="207:43" id="UuR-s7-zAa"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
+                                                        <state key="normal" title="Play Keno!"/>
+                                                        <connections>
+                                                            <action selector="playAction:" destination="0Fh-3b-Qng" eventType="touchUpInside" id="MxR-f4-of4"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="TQq-0N-hpY" firstAttribute="width" secondItem="3ff-Oj-Q20" secondAttribute="width" id="AvB-tg-jmV"/>
+                                                    <constraint firstItem="TQq-0N-hpY" firstAttribute="width" secondItem="3ff-Oj-Q20" secondAttribute="height" multiplier="9:10" id="RYw-Q1-mC0"/>
+                                                    <constraint firstItem="TQq-0N-hpY" firstAttribute="height" secondItem="3ff-Oj-Q20" secondAttribute="height" multiplier="0.8" id="Sep-PE-NKI"/>
+                                                    <constraint firstItem="TQq-0N-hpY" firstAttribute="centerX" secondItem="3ff-Oj-Q20" secondAttribute="centerX" id="kNo-nv-y99"/>
+                                                    <constraint firstItem="TQq-0N-hpY" firstAttribute="centerY" secondItem="3ff-Oj-Q20" secondAttribute="centerY" id="kQK-r7-2Hy"/>
+                                                    <constraint firstItem="TQq-0N-hpY" firstAttribute="height" secondItem="3ff-Oj-Q20" secondAttribute="height" id="ll8-g2-gcd"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="RYw-Q1-mC0"/>
+                                                        <exclude reference="ll8-g2-gcd"/>
+                                                        <exclude reference="AvB-tg-jmV"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6LF-ys-ctt">
+                                                <rect key="frame" x="0.0" y="86" width="414" height="86"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gN4-KN-lKD" userLabel="Balance" customClass="THLabel">
+                                                        <rect key="frame" x="161" y="9" width="92" height="68"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="innerShadowColor">
+                                                                <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="innerShadowOffset">
+                                                                <size key="value" width="6" height="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="innerShadowBlur">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                                                <color key="value" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="gN4-KN-lKD" firstAttribute="height" secondItem="6LF-ys-ctt" secondAttribute="height" multiplier="0.8" id="1Iv-Tn-CAf"/>
+                                                    <constraint firstItem="gN4-KN-lKD" firstAttribute="centerX" secondItem="6LF-ys-ctt" secondAttribute="centerX" id="O0d-Ym-vGa"/>
+                                                    <constraint firstItem="gN4-KN-lKD" firstAttribute="centerY" secondItem="6LF-ys-ctt" secondAttribute="centerY" id="mGi-9o-Jjm"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRx-XL-xK2">
+                                                <rect key="frame" x="0.0" y="172" width="414" height="86"/>
+                                                <subviews>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Bet!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZ2-gd-eok" userLabel="Bet" customClass="THLabel">
+                                                        <rect key="frame" x="43" y="9" width="328" height="68"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="kZ2-gd-eok" secondAttribute="height" multiplier="207:43" id="Qcr-Jv-Sw2"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="innerShadowOffset">
+                                                                <size key="value" width="1" height="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                                                <real key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="innerShadowBlur">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="kZ2-gd-eok" firstAttribute="height" secondItem="gRx-XL-xK2" secondAttribute="height" multiplier="0.8" id="Iuv-l0-EeK"/>
+                                                    <constraint firstItem="kZ2-gd-eok" firstAttribute="centerX" secondItem="gRx-XL-xK2" secondAttribute="centerX" id="mzl-wo-xsg"/>
+                                                    <constraint firstItem="kZ2-gd-eok" firstAttribute="centerY" secondItem="gRx-XL-xK2" secondAttribute="centerY" id="yeg-1i-aIL"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PO8-4r-0bn">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="258" id="fxl-sL-5MA"/>
+                                            <constraint firstAttribute="width" constant="414" id="tYg-yG-EiH"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="fxl-sL-5MA"/>
+                                                <exclude reference="tYg-yG-EiH"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kfl-Mz-Nvl" secondAttribute="trailing" id="3dn-IK-sOa"/>
+                                    <constraint firstItem="kfl-Mz-Nvl" firstAttribute="leading" secondItem="HZc-kx-NTB" secondAttribute="leading" id="AeX-kf-Jfa"/>
+                                    <constraint firstItem="PO8-4r-0bn" firstAttribute="leading" secondItem="HZc-kx-NTB" secondAttribute="leading" id="Igg-MO-bua"/>
+                                    <constraint firstAttribute="bottom" secondItem="kfl-Mz-Nvl" secondAttribute="bottom" id="It6-ND-Ii8"/>
+                                    <constraint firstAttribute="trailing" secondItem="PO8-4r-0bn" secondAttribute="trailing" id="N9h-un-NO3"/>
+                                    <constraint firstAttribute="bottom" secondItem="PO8-4r-0bn" secondAttribute="bottom" id="WI1-MD-p2p"/>
+                                    <constraint firstItem="kfl-Mz-Nvl" firstAttribute="top" secondItem="HZc-kx-NTB" secondAttribute="top" id="h9e-Hp-M0T"/>
+                                    <constraint firstItem="PO8-4r-0bn" firstAttribute="top" secondItem="HZc-kx-NTB" secondAttribute="top" id="kP0-R1-oY5"/>
+                                    <constraint firstAttribute="bottom" secondItem="kfl-Mz-Nvl" secondAttribute="bottom" id="xcH-ol-MLe"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2e-pS-NTD" userLabel="Login Screen">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <connections>
+                                    <segue destination="CfL-Ci-pen" kind="embed" id="ASh-qe-XmH"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="x0A-1V-sor" secondAttribute="trailing" id="3uM-ic-TT5"/>
+                            <constraint firstItem="HZc-kx-NTB" firstAttribute="leading" secondItem="74d-ih-qlc" secondAttribute="leading" id="DJX-sn-jpc"/>
+                            <constraint firstItem="x0A-1V-sor" firstAttribute="leading" secondItem="74d-ih-qlc" secondAttribute="leading" id="HFO-J6-33E"/>
+                            <constraint firstAttribute="trailing" secondItem="J2e-pS-NTD" secondAttribute="trailing" id="HeA-5v-JjM"/>
+                            <constraint firstItem="aUh-s9-MGg" firstAttribute="leading" secondItem="74d-ih-qlc" secondAttribute="leading" id="KKb-Kn-IIa"/>
+                            <constraint firstItem="Mll-Tz-40M" firstAttribute="top" secondItem="J2e-pS-NTD" secondAttribute="bottom" id="Lk9-NC-QtA"/>
+                            <constraint firstItem="x0A-1V-sor" firstAttribute="top" secondItem="SeN-pz-5pO" secondAttribute="bottom" id="SD1-tL-YBe"/>
+                            <constraint firstItem="J2e-pS-NTD" firstAttribute="leading" secondItem="74d-ih-qlc" secondAttribute="leading" id="Sjv-jd-IKj"/>
+                            <constraint firstItem="Mll-Tz-40M" firstAttribute="top" secondItem="HZc-kx-NTB" secondAttribute="bottom" id="TyJ-mF-dLH"/>
+                            <constraint firstAttribute="trailing" secondItem="HZc-kx-NTB" secondAttribute="trailing" id="WTU-0C-yyM"/>
+                            <constraint firstItem="HZc-kx-NTB" firstAttribute="top" secondItem="x0A-1V-sor" secondAttribute="bottom" id="ZaB-op-agP"/>
+                            <constraint firstItem="aUh-s9-MGg" firstAttribute="top" secondItem="74d-ih-qlc" secondAttribute="top" id="aGz-77-6Hd"/>
+                            <constraint firstAttribute="trailing" secondItem="aUh-s9-MGg" secondAttribute="trailing" id="dfw-C4-e71"/>
+                            <constraint firstItem="Mll-Tz-40M" firstAttribute="top" secondItem="aUh-s9-MGg" secondAttribute="bottom" id="qKQ-uh-8Pa"/>
+                            <constraint firstItem="J2e-pS-NTD" firstAttribute="top" secondItem="74d-ih-qlc" secondAttribute="top" id="zFV-4o-FN4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yiw-Dv-2Ym"/>
+                    <connections>
+                        <outlet property="balanceLabel" destination="gN4-KN-lKD" id="UGP-ro-bNg"/>
+                        <outlet property="betLabel" destination="kZ2-gd-eok" id="Mre-Db-g5U"/>
+                        <outlet property="controlArea" destination="HZc-kx-NTB" id="9NP-uz-H6W"/>
+                        <outlet property="kenoBorder" destination="x0A-1V-sor" id="xDz-Fk-m7E"/>
+                        <outlet property="playButton" destination="TQq-0N-hpY" id="FPR-Gh-Ix0"/>
+                        <segue destination="61V-cj-sZB" kind="show" id="n8K-0j-fgW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgL-9u-IW2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="386"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YAW-LQ-IFw"/>
+    </inferredMetricsTieBreakers>
 </document>
